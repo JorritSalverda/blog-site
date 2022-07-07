@@ -28,15 +28,15 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="text-lg subpixel-antialiased">
         <div className="p-3 max-w-3xl mx-auto min-h-screen">
-          <div className="relative h-44 flex items-center">
+          <div className="relative h-44 flex items-center justify-end sm:justify-center">
             <Link to="/" className="absolute left-0">
               <img src="/go_green.png" width="100" />
             </Link>
-            <Link to="/" className="flex-auto text-center leading-none font-medium">
+            <Link to="/" className="text-center w-9/12 flex-initial sm:w-full sm:flex-auto leading-none font-medium">
               <h1 className="text-5xl text-lime-600">Going Green</h1>
-              <h6 className="text-md text-slate-600">One step at a time</h6>
+              <h6 className="text-md italic text-slate-500">Step by step</h6>
             </Link>
           </div>
           <div className="pt-6">
