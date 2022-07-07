@@ -2,7 +2,7 @@ import type { LoaderFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare"
 import { Link, useLoaderData } from "@remix-run/react";
 
-import * as postA from "./posts/retrofitting-underfloor-heating.mdx";
+import * as postA from "./posts/underfloor-heating.mdx";
 
 export type Post = {
   slug: String;
