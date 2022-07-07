@@ -29,13 +29,19 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="my-0 p-6">
-          <Link to="/">
-            <h1 className="text-5xl text-center mt-2 mb-6 text-lime-600 font-medium">Going Green</h1>
-          </Link>
-        </div>
-        <div className="max-w-5xl mx-auto min-h-screen my-0 p-6">
-          <Outlet />
+        <div className="p-3 max-w-3xl mx-auto min-h-screen">
+          <div className="relative h-44 flex items-center">
+            <Link to="/" className="absolute left-0">
+              <img src="/go_green.png" width="100" />
+            </Link>
+            <Link to="/" className="flex-auto text-center leading-none font-medium">
+              <h1 className="text-5xl text-lime-600">Going Green</h1>
+              <h6 className="text-md text-slate-600">One step at a time</h6>
+            </Link>
+          </div>
+          <div className="">
+            <Outlet />
+          </div>
         </div>
         <ScrollRestoration />
         <Scripts />

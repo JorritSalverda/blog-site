@@ -4,6 +4,7 @@
 /functions/\[\[path\]\].js.map
 /public/build
 .env
+.DS_Store
 
 /app/tailwind.css
 
