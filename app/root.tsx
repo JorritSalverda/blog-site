@@ -39,7 +39,7 @@ export default function App() {
               <h6 className="text-md text-slate-600">One step at a time</h6>
             </Link>
           </div>
-          <div className="">
+          <div className="pt-6">
             <Outlet />
           </div>
         </div>
