@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="text-lg subpixel-antialiased">
+      <body className="text-lg subpixel-antialiased bg-slate-50">
         <div className="p-3 max-w-3xl mx-auto min-h-screen">
           <div className="relative h-44 flex items-center justify-end sm:justify-center">
             <Link to="/" className="absolute left-0">

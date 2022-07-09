@@ -2,9 +2,10 @@ import * as postUnderfloorHeating from "../routes/posts/underfloor-heating.mdx";
 import * as postSolarPanels from "../routes/posts/solar-panels.mdx";
 
 export type Post = {
-  slug: String;
-  title: String;
-  intro: String;
+  slug: string;
+  title: string;
+  intro: string;
+  thumbnail: string;
   created: Date;
 }
 
@@ -13,6 +14,7 @@ function postFromModule(module: any): Post {
     slug: module.filename.replace(/\.mdx?$/, ""),
     title: module.attributes.meta.title,
     intro: module.attributes.meta.intro,
+    thumbnail: module.attributes.meta.thumbnail,
     created: new Date(module.attributes.meta.created),
   };
 }

@@ -14,4 +14,10 @@
   p {
     @apply mb-4 leading-relaxed;
   }
+
+  img {
+    /* @apply max-h-96; */
+    max-height: 744px;
+    @apply m-auto;
+  }
 }
