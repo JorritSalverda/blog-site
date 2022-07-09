@@ -1,35 +1,16 @@
 import type { LoaderFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare"
 import { Link, useLoaderData } from "@remix-run/react";
+import { getPosts } from "~/models/post.server";
 
-import * as postA from "./posts/underfloor-heating.mdx";
-
-export type Post = {
-  slug: String;
-  title: String;
-  intro: String;
-  created: Date;
-}
-
-function postFromModule(module: any): Post {
-  return {
-    slug: module.filename.replace(/\.mdx?$/, ""),
-    title: module.attributes.meta.title,
-    intro: module.attributes.meta.intro,
-    created: new Date(module.attributes.meta.created),
-  };
-}
+type LoaderData = Awaited<ReturnType<typeof getPosts>>;
 
 export const loader: LoaderFunction = async () => {
-  const posts = [
-    postFromModule(postA),
-  ];
-
-  return json(posts);
+  return json<LoaderData>(await getPosts());
 }
 
 export default function Index() {
-  const posts = useLoaderData<Array<Post>>();
+  const posts = useLoaderData<LoaderData>();
 
   return (
     <>
