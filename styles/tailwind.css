@@ -4,11 +4,11 @@
 
 @layer base {
   h1 {
-    @apply text-3xl font-medium my-6;
+    @apply text-3xl text-lime-600 font-medium my-6;
   }
 
   h2 {
-    @apply text-xl font-medium my-4;
+    @apply text-xl text-lime-600 font-medium my-4;
   }
 
   p {

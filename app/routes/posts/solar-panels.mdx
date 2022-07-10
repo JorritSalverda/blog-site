@@ -2,9 +2,11 @@
 meta:
   title: Solar panels
   intro: For generating a large part of our own electricity consumption we've installed roof-mounted solar panels.
-  thumbnail: /media/solar-panels/solar-panels-01.jpg
+  thumbnail: /media/solar-panels/solar-panels-03.jpg
   created: 2020-08-21T00:00:00.000Z
 ---
+
+import ImageGrid from "~/components/image-grid";
 
 # {attributes.meta.title}
 
@@ -26,17 +28,19 @@ There's also a choice to be made between a central inverter, micro inverters or 
 
 With a specific way of mounting the panels to the roof installation took slightly longer than most installations, but it's a more secure fixation.
 
-![](/media/solar-panels/solar-panels-01.jpg)
-
-![](/media/solar-panels/solar-panels-02.jpg)
-
-![](/media/solar-panels/inverter-01.jpg)
+<ImageGrid images={[
+  "/media/solar-panels/solar-panels-01.jpg",
+  "/media/solar-panels/solar-panels-02.jpg",
+  "/media/solar-panels/solar-panels-03.jpg",
+  "/media/solar-panels/inverter-01.jpg",
+]} />
 
 ## Result
 
-![](/media/solar-panels/solar-panels-03.jpg)
-
-![](/media/solar-panels/solar-panels-04.jpg)
+<ImageGrid images={[
+  "/media/solar-panels/solar-panels-04.jpg",
+  "/media/solar-panels/solar-panels-05.jpg",
+]} />
 
 In the first full year of installation the array generated 5022 kWh. A bit lower than we had hoped for, but it still saves a huge amount of money on a yearly basis. In the graph below you can see a very sunny day. Orange is electricity from the grid, green is self-used solar electricity and yellow is excess solar going back into the grid.
 
