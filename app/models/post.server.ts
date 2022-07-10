@@ -1,5 +1,6 @@
 import * as postUnderfloorHeating from "../routes/posts/underfloor-heating.mdx";
 import * as postSolarPanels from "../routes/posts/solar-panels.mdx";
+import * as postGroundSourceHeatPump from "../routes/posts/ground-source-heat-pump.mdx";
 
 export type Post = {
   slug: string;
@@ -23,6 +24,7 @@ export async function getPosts(): Promise<Array<Post>> {
   const posts = [
     postFromModule(postUnderfloorHeating),
     postFromModule(postSolarPanels),
+    postFromModule(postGroundSourceHeatPump),
   ];
 
   const sortedPosts = posts.sort(
