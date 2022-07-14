@@ -30,8 +30,8 @@ export default function App() {
       </head>
       <body className="text-lg text-slate-700 subpixel-antialiased bg-gradient-to-b from-slate-100 to-slate-50">
         <div className="p-3 max-w-3xl mx-auto min-h-screen">
-          <div className="relative h-44 flex items-center justify-end sm:justify-center">
-            <Link to="/" className="absolute left-0">
+          <div className="relative h-40 p-3 flex items-center justify-end sm:justify-center">
+            <Link to="/" className="flex-none w-40">
               <img src="/go_green.png" width="100" alt="logo" />
             </Link>
             <Link to="/" className="text-center w-9/12 flex-initial sm:w-full sm:flex-auto leading-none font-medium">
