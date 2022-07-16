@@ -6,6 +6,8 @@ meta:
   created: 2018-08-01T00:00:00.000Z
 ---
 
+import ImageGrid from "~/components/image-grid";
+
 # {attributes.meta.title}
 
 Before we moved into our new house it was still outfitted with gas-fired central heating and wall-mounted radiators. In order to be able to wean ourselves off of fossil fuel for heating, tap water and cooking in the future we knew it was best to start using underfloor heating. It can keep your house warm at much lower temperatures, making it a better fit for a heatpump.
@@ -16,11 +18,15 @@ Unfortunately the 9 year old house didn't have underfloor heating on any of the 
 
 Since taking apart the floors is very disruptive we had this work done before we moved into the house. All existing floors first have to be removed, then a specialized milling machine mills tracks into the underfloor. They are spaced 10 cm apart in a pretty attractive pattern as you can see below.
 
-![](/media/underfloor-heating/milling-01.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "milling-01.jpg",
+]} />
 
 The tracks are then filled with pipes, which are actually plastic tubes through which the warm water flows. When underfloor heating is applied during construction these pipes are much deeper inside the floor. This leads to a more even distribution of heat on the surface. But this is pretty much impossible to do in retrofit.
 
-![](/media/underfloor-heating/milling-02.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "milling-02.jpg",
+]} />
 
 ## Distributors
 
@@ -28,23 +34,31 @@ To get warm water into the underfloor heating you need a distributor on each lev
 
 When you use a low temperature source like a heatpump you use a _closed_ distributor which doesn't have a pump of its own and just relies on the temperature of the incoming water to be within limits. Although we asked for distributors to be prepared in light of a future heatpump we still got _open_ distributors installed. This could have probably been avoided by just lowering the output temperature of the central heater to 40° Celsius. We did that anyway to save gas.
 
-![](/media/underfloor-heating/distributor-01.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "distributor-01.jpg",
+]} />
 
 ## Floors
 
 To make the use of underfloor heating efficient you need to pay close attention to the thermal conductivity of the type of floor. For wood this means you better not use a solid wood floor, but a special laminated wooden floor with a higher thermal conductivity. In our case we choose a floor consisting of 10 mm of laminated layers with 2 mm of oak on top for the ground level.
 
-![](/media/underfloor-heating/floor-01.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "floor-01.jpg",
+]} />
 
 On the other levels we choose a polyurethane floor, which has even better thermal conductivity.
 
-![](/media/underfloor-heating/floor-02.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "floor-02.jpg",
+]} />
 
 ## Zone control
 
 In order to have control over the individual temperature in each room you need a zone control system. There's wireless systems that put a thermostat in each room which communicates with a controller next to each distributor. This controller then opens or closes individual valves on the distributor to start and stop the flow of warm water to different spaces. Wether you can separately control the temperature for a certain space is dependent on whether it has it's own loops. Close to the distributor, of which you have one per level, all loops come together making it harder to set a specific temperature there. For us this is the case in the ground level and first level hallways.
 
-![](/media/underfloor-heating/zone-control-01.jpg)
+<ImageGrid basePath="/media/underfloor-heating/" images={[
+  "zone-control-01.jpg",
+]} />
 
 Some brands with zone control are Honeywell and Uponor. When choosing a zone control system it's important to check whether it supports cooling as well. We initially bought a system that didn't support it and had to replace it completely when switching to a heatpump with cooling function.
 
