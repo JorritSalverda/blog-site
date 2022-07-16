@@ -7,9 +7,12 @@ meta:
 ---
 
 import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
 <ImageGrid basePath="/media/load-shifting/" images={[
   "dynamic-rates-01.png",
 ]} />
+
+<Outlet />

@@ -7,6 +7,7 @@ meta:
 ---
 
 import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
@@ -15,3 +16,5 @@ import ImageGrid from "~/components/image-grid";
   "green-roof-02.jpg",
   "green-roof-03.jpg",
 ]} />
+
+<Outlet />

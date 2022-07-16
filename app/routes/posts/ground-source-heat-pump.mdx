@@ -7,6 +7,7 @@ meta:
 ---
 
 import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
@@ -58,3 +59,5 @@ We have an Alpha Innotec SWCV 92k3 heat pump installed. It's a very efficient ma
 ## Result
 
 The results are really great. The heat pump is a much better source of keeping your underfloor heating at the right temperature all day long instead of starting and stopping all the time. We used to use 1800-1900 m3 of gas, which is equivalent of 18000 to 20000 kWh. With the heat pump we only use 4000 to 4500 kWh of electricity, making it indeed 4 times more efficient than a gas heating system.
+
+<Outlet />

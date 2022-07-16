@@ -7,6 +7,7 @@ meta:
 ---
 
 import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
@@ -64,3 +65,5 @@ Some brands with zone control are Honeywell and Uponor. When choosing a zone con
 With underfloor heating at low temperatures the source of heat runs for many more hours per day then it would with a high temperature system. This takes it's toll on a gas fired heater because they're not made for constantly switching on and off. Besides it being very noisy due to these frequent starts and stops it needed extra maintenance as well. Also important to realize is that a gas fired heater still uses quite some electricity for it's pump.
 
 With the type of distributors, needed thickness of the pipes towards each distributor for cooling and the zone control system needing support for cooling being quite different for a gas fired source and a heatpump it's better to do it all at once. Our time and financials didn't allow us to do it all at once, so unfortunately later on this introduced extra costs. Nonetheless we were very happy to have tackled step one towards a gas free home.
+
+<Outlet />

@@ -7,6 +7,7 @@ meta:
 ---
 
 import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
@@ -51,3 +52,5 @@ In the first full year of installation the array generated 5022 kWh. A bit lower
 For a brighter future we do need to think about storage. Currently in a full year we only use 35% of our own generated solar, the other 65% makes its way back into the grid. This is fine as long as there's not enough renewable energy in the grid mix, but when we go towards 100% you want to make sure you use as much of your own energy as possible.
 
 We're very happy though with use generating our own electricity. And the east/west orientation having a higher overlap with our own energy consumption pattern. South facing solar panels have a much higher yield, but you'll be able to use even less yourself because it has one single peak on mid-day.
+
+<Outlet />

@@ -8,7 +8,7 @@ type LoaderData = { post: string, image: string };
 export const loader: LoaderFunction = async ({
   params,
 }) => {
-  return json({ post: params.post, image: params.image });
+  return json({ post: "green-roof", image: params.image });
 };
 
 export default function ImageRoute() {
