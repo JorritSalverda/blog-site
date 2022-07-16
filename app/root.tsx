@@ -36,7 +36,7 @@ export default function App() {
             </Link>
             <Link to="/" className="text-center w-9/12 flex-initial sm:w-full sm:flex-auto leading-none font-medium">
               <h1 className="text-5xl m-2 text-lime-600">Going Green</h1>
-              <h6 className="text-md m-2 italic text-slate-500">For a brighter future</h6>
+              <h6 className="text-md m-2 italic text-slate-500">Towards a sustainable future</h6>
             </Link>
           </div>
           <div className="pt-6">
