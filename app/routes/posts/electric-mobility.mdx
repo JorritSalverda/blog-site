@@ -11,10 +11,44 @@ import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
+Having weaned ourselves off of fossil fuels for our home there was one last bastion left to tackle: mobility. Although we drove a fairly efficient internal combustion engine (ICE) vehicle, it still didn't feel right every time we filled it up or even started the engine in front of our house.
+
+## Driving experience
+
+Let me first start off, anyone that says it's better to keep driving an ICE vehicle has never driven a modern electric vehicle. They're that much more fun and easy to drive. It takes a couple of days to get used to one-pedal driving, but once you have the ease of slowing down by lifting your foot off the pedal you never want to go back. The instant torque is also brilliant, although not necessarily pleasant for your passengers if you take off like your in formula one at every stoplight. For the rest it's just like driving any car and gets you from A to B.
+
+## Range anxiety
+
+The supposedly big elephant in the room that has everyone talking when you start a conversation about electric vehicles is range. Although it's important for longer trips most people overestimate how often they would need this long range. It's probably only once a year when they drive a long distance during their holidays. For the rest the average commute is fairly small and can work with most EVs. For those longer trips it's invaluable to have rapid charging, rather then just a long range. Nonetheless range is an important factor. But better to increase range by using an efficient vehicle instead of putting an extremely large battery inside, which even further decreases efficiency.
+
+The vehicle we bought has range up to 500 kilometers on paper, in reality it depends very much on the ambient temperature and the average speed you are driving. At 100 km/h a 100% state of charge takes us between 450 and 475 km. But when driving 130 km/h it's noticeably less. That's because the aerodynamic resistance increases by the square of your speed. It's the same for your ICE vehicle.
+
+## Charging
+
+In reality - depending on the chemistry of the battery - you probably don't want to have it charged to 100% all the time. For lithium ion batteries this impacts the lifetime. So you usually keep it between 20 and 80% state of charge. With 85% state of charge I make my weekly trip to work and back, a total of 375km without a problem given that you're not allowed to go faster than 100 km/h during the day. I return home with some 40 kilometers left in the battery.
+
+The nice thing about an EV if you have your own driveway is that you can charge at home. It's much more affordable than supercharging along your route. It's also far less time consuming since you only have to plug it in when you arive at home, which takes about 10 seconds. It'll be charged the next time you need it. And you can charge it from your own solar roof, ensuring the energy is emission free.
+
+Of course you still need to visit a public charger every now and then, particularly when taking longer road trips. In that case a good charging network is invaluable. In the Netherlands we're pretty spoiled with a lot of public chargers. It's expected to rapidly improve across Europe with the rise of EVs being sold.
+
 <ImageGrid basePath="/media/electric-mobility/" images={[
   "electric-vehicle-01.jpg",
   "electric-vehicle-02.jpg",
   "wallbox-01.jpg",
 ]} />
+
+## Total cost of ownership
+
+Of course most electric vehicles sold are still very expensive. But buying a new car in general is. And some of the huge ICE SUVs you see driving around are equally if not more expensive when bought new. Before I never thought we would buy a new car in our lifetime. But to make the switch to an electric vehicle there was little option to buy a second hand and most of them have still relatively low range. It's still hugely improving year over year.
+
+If you look at the purchase cost and energy costs combined divided by the number of kilometers driven, we're now at € 5,43 / km. This will continue to go down for every additional kilometer we drive. Of course factoring in the purchase cost doesn't tell you how efficient it is. When looking at the cost of all electricity that went into the vehicle so far divided by the number of kilometers we're at € 0,05 / km. We're at an efficiency of approximately 4,5 km / kWh.
+
+Getting to such a low price per kilometer is mostly accomplished by charging at home. 77% of our kilowatt-hours have been charged at home. The other 23% mostly at superchargers. That 77% of home charging costed 63% of total charging costs, while the supercharging was responsible for the remaining 37%. That makes charging at home, if possible that much more economic.
+
+The costs of charging can be reduced even further by taking a dynamic tarrif - this has rates varying by the hour or even more frequently - and use an app like Jedlix to control when your vehicle gets charged. I'll dive into this feature called load shifting in more detail in a separate post.
+
+## Result
+
+We're very happy with the switch to full electric so far. Already have taken a road trip of 1000 km back and forth I can say it's seriously effortless to drive and would never want to switch back. One thing I would wish for is that all EVs get a future requirement to support vehicle-to-grid (V2G) so it can feed back electricity into the grid when it's in high demand. This makes the big battery parked on your driveway for 90% of the time multifunctional and will even earn you money during that time.
 
 <Outlet />

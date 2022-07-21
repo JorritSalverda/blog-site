@@ -30,7 +30,7 @@ export async function getPosts(): Promise<Array<Post>> {
     postFromModule(postSolarPanels),
     postFromModule(postGroundSourceHeatPump),
     postFromModule(postGreenRoof),
-    // postFromModule(postElectricMobility),
+    postFromModule(postElectricMobility),
     // postFromModule(postLoadShifting),
   ];
 
