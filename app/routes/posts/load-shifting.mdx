@@ -11,8 +11,54 @@ import { Outlet } from "@remix-run/react";
 
 # {attributes.meta.title}
 
+For us to make the energy transition work and actually speed up decarbonisation of the electric grid on of the key ingredients will be to make demand and supply meet each other. Up until now this was mostly done by forecasting demand and then ensuring there was enough generation to meet demand. The intermittency of sustainable energy generation - solar and wind in particular - flips this around though.
+
+We could try and tackle this by installing huge batteries to fill in the gaps when there is more demand than generation, but that's only one way to solve things. For flexible loads it's much better to shift the load to the time there's enough generation. This can be done for charging electric vehicles, heating your tap water or home. And for some industrial processes. I'll focus on what's possible at home though.
+
+To determine when there's the most clean generation of electricity the day ahead electricity prices can be used as a proxy. Cheaper electricity is cleaner electricity most of the time. At least that's the assumption I'm making here.
+
+As an experiment we've switched to a dynamic price tarriff to see how this unfolds. It does move the risk of price volatility to you as a consumer, but on average the prices should be lower than when using a fixed price contract as the risk has then been factored into the price.
+
+## Shifting when EVs charge
+
+Since an electric vehicle is in essence a battery on wheels it doesn't really matter when you charge it as long as it has enough charge when you leave. However you don't want to manually control when it starts and stops all the time, so in comes automation. When we bought our EV we also had a smart charger installed. The Wallbox Pulsar Plus charger can take any excess solar energy you generate and put it into the car. However what we didn't realize upfront is that there's a minimum rate at which you have to charge your car. And combined with the 3 phase charger we use this number was actually higher than what our solar roof has to offer most of the year. Second to that you don't want the charger to disallow grid electricity to be used when warming or cooling the vehicle prior to departure. But that's just what this smart charger did.
+
+When I discovered the existence of the [Jedlix](https://jedlix.com/) app that can control charging of your vehicle and even give you compensation for every kWh charged by them I realized we could have installed the dumbest possible charger instead. In the app you can either enter your peak and off peak tariffs and times. Or every better when you switch to a dynamic rate electricity provider it will automatically plan charging at the cheapest time available before the time you've set for your next departure.
+
+In this graph you can see how prices vary during the day. Most of the times prices don't go this low, but in the weekends when there's ample wind and solar energy and less demand prices can even go negative.
+
 <ImageGrid basePath="/media/load-shifting/" images={[
-  "dynamic-rates-01.png",
+  "dynamic-rates-02.png",
 ]} />
+
+Here you can see that the Jedlix app automatically scheduled charging of the EV at the time prices where low. When you don't need to leave until after the weekend it usually patiently waits for the weekend before it starts charging, because on average prices are lower at that time.
+
+<ImageGrid basePath="/media/load-shifting/" images={[
+  "load-shifting-01.png",
+]} />
+
+When the dynamic prices are combined with actual usage and excess energy you will see money coming in or going out. But here charging of the vehicle turned out to be very cheap at € 0,03 / kWh including taxes. The price before taxes was even negative and would have made us money charging the vehicle. Excess solar would have cost us money also though.
+
+<ImageGrid basePath="/media/load-shifting/" images={[
+  "load-shifting-02.png",
+]} />
+
+## Shifting when tap water heats
+
+In retrospect the heat pump we installed in our home, although very efficient and mechanically sound turns out to have very little smarts. You can schedule when it is allowed to heat tap water, but it can't automatically adapt to dynamic pricing. To still be able to do this I've coded an application myself that looks at the day ahead electricity prices and then updates the times when tap water is allowed to be heated by the heat pump. It does this twice a day so there's always enough warm water but it still makes use of the cheapest times during the night and the cheapest times during the day to heat the water.
+
+Also once a week the water in the water storage has to be heated to 65° Celsius for desinfection purposes (to avoid any risk on legionnaires disease). This is even more energy intensive so you definitely want to schedule this at the most affordable time of day. I've coded this to happen once a week on average but to increase chances it happens no the cheapest day - which we don't know for sure - the chances of going for the lowest price rises with every day in my algorithm. Between 4 and 10 days after the last desinfection run it compares the ratio between lowest and highest price of the day and each day it allows for a less ideal ratio to trigger desinfection. When it hasn't run after 10 days it will for sure run on that day at the most affordable time.
+
+Of course not everyone is able to code applications like this, so it should be up to the manufacturer to put in smarts like this. Brands like Nibe already have connected heat pumps that can use dynamic tarrifs to determine the best times to use electricity and more important when to use less.
+
+## Shifting other appliances
+
+Armed with day ahead prices you can shift other heavy energy users like dishwasher, washing machine and dryer to run at the best time. However this is a manual effort and sometimes I mess up my calculations because those devices often let you set when it needs to finish, not when to start. This is the first time I realized that there's a benefit to have all of those devices connected to the internet.
+
+There's brands like Miele already experimenting with smart price adaption, but currently only in their most expensive lineups. I hope this becomes more common in the years to come and possibly even enforced by European legislation as it really will make a difference in the speed at which we decarbonize our grid.
+
+## Result
+
+So far shifting demand of our most heavy energy consuming devices we've saved quite a lot of money. And even more important lowered our emissions.
 
 <Outlet />

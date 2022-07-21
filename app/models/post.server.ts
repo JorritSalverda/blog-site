@@ -31,7 +31,7 @@ export async function getPosts(): Promise<Array<Post>> {
     postFromModule(postGroundSourceHeatPump),
     postFromModule(postGreenRoof),
     postFromModule(postElectricMobility),
-    // postFromModule(postLoadShifting),
+    postFromModule(postLoadShifting),
   ];
 
   const sortedPosts = posts.sort(
