@@ -1,0 +1,56 @@
+---
+meta:
+  title: The future is electric
+  intro: Make load shifting effortless and speed up the transition. This is what the energy company of the future does for you.
+  thumbnail: /media/the-future-is-electric/wind-turbine-01.jpeg
+  created: 2022-08-24T00:00:00.000Z
+---
+
+import ImageGrid from "~/components/image-grid";
+import { Outlet } from "@remix-run/react";
+
+# {attributes.meta.title}
+
+For decades (and still) the electricity grid's reliability of always being available depends on power plants that can spin up on demand. This means supply needs to meet demand. Across many households and industries demand turns out to be pretty predictable. It has a large peak in the morning - when people get up, have breakfast and go to work - and a larger peak in the evening - when they return home, have dinner and watch television. During weekends and holidays overall demand is less and the peaks and troughs have less amplitude.
+
+<ImageGrid basePath="/media/the-future-is-electric/" images={[
+  "dynamic-tariffs-01.jpeg",
+]} />
+
+Moving to an electric future powered by sustainable energy this changes. Instead of supply following demand this has to be flipped to make sure demand follows supply. This is due to the variable nature of wind and solar power which can't be turned on when we need it.
+
+## Demand follows supply
+
+With heavy energy consumers like electric vehicles (EV), heat pumps, washing machines, dryers and dish washers it is possible to plan when they run so that demand meets supply. Of course we won't see people getting up in the middle of the night to start the washing machine or run out to plug in their electric vehicle at the right moment. People are unlikely to hand in any comfort they are used to. This is where software comes in.
+
+Smart charging of EVs is a good example. You tell the vehicle when you need to have it ready for your next trip. Software does the rest. Behind the screens software ensures the car charges when there's an abundance of green energy while making sure it's ready in time for when you need it. Setting the time you need to leave still requires some effort though and needs people to slightly change their ways. This is where financial incentives come in to tempt people into using load shifting. Not too many people are tree huggers like myself, but almost everyone is 'homo economicus' or susceptible to financial stimulae. With rewards per kWh charged or an electricity contract with dynamic tariffs it suddenly becomes beneficial to have software control charging of the vehicle or other appliances instead of having them start rightaway.
+
+<ImageGrid basePath="/media/the-future-is-electric/" images={[
+  "smart-charging-01.jpeg"
+]} />
+
+Most EVs are already connected, but more and more household appliances will have to become connected as well to support load shifting to speed up the transition. Currently only few heat pumps and top of the line washing machines, dryers and dish washers can be controlled in such a way. This should become standard for all models sold in the near future though. Preferably in a standardized way to be controlled by software. And for all loads that can't be shifted as easily a home or grid battery will play a big role in ensuring it doesn't need a gas fired power plant to spin up.
+
+## The electricity company of the future
+
+Currently there's a wealth of apps to control load shifting for electric vehicles and less so for other appliances. Having all these apps is inconvenient and less likely to find mass adoption. Over time this will consolidate into less apps. Or even better be handled by your energy company. One company, [Tibber](https://tibber.com/), already moves in this direction. It sells electricity with a dynamic tariff with prices changing by the hour, reflecting actual supply and demand. It allows you to let them control more and more appliances that support load shifting, so you reduce your electricity bill and help decarbonize the electricity grid at a faster rate. 
+
+<ImageGrid basePath="/media/the-future-is-electric/" images={[
+  "smart-home-01.jpeg"
+]} />
+
+Standardization in this world of connected appliances is still a big mess though. It's still a huge effort for a company like Tibber to support all devices you own, even if they're already connected to the internet. This makes it that the companies developing all these controls need to have deep pockets to do all the development work needed. It's an area that could hugely benefit from more standardisation possibly enforced by legislation at European level.
+
+## Resiliency & privacy
+
+A drawback of one company controlling all of your devices is that as soon as they have issues in their software platform or your internet goes down it stops functioning and will leave people anxious and frustrated. On top of that there's the privacy aspect of one company knowing which devices you own, when they run and when you leave your home. 
+
+To tackle those aspects a solution would be to move the brains of all this load shifting into a smart electricity panel - or some form of energy manager - in your home, with which your appliances communicate and plan when best to run. Only the smart panel needs to be aware of hourly electricity rates, congestion on the local grid, etc. And it will continue to work to some extent when internet connectivity goes down.
+
+## Conclusion
+
+Although dynamic tariffs and load shifting are still very niche products they are likely to take center stage in the years to come. With electricity companies already changing to shorter and shorter intervals at which they update their tariffs and more heavy electricity consumers like EVs and heat pumps finding their way into homes this is likely to change very rapidly.
+
+And to speed up the transition people actually need to learn that electricity is relatively clean for large parts of the day except during those peaks in demand when gas peaker plants fire up to meet demand. Having a financial reward to stay away from those expensive times will help decarbonize the grid that much faster.
+
+<Outlet />
