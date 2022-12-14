@@ -20,4 +20,8 @@
     max-height: 744px;
     @apply m-auto mb-4;
   }
+
+  p>a {
+    @apply text-lime-600 underline;
+  }
 }
